@@ -1,0 +1,20 @@
+
+mkdir src/app/photos
+mkdir src/app/photos/[id]
+mkdir src/app/signin
+mkdir src/app/signup
+mkdir src/app/profile
+
+
+
+
+New-Item -Path "src/app/photos/page.jsx", 
+"src/app/photos/[id]/page.jsx", 
+"src/app/signin/page.jsx", 
+"src/app/signup/page.jsx", 
+"src/app/profile/page.jsx", 
+"src/components/NavBar.jsx", 
+"src/components/Banner.jsx", 
+"src/components/FeaturedImages.jsx", 
+"src/components/PhotoCard.jsx", 
+"src/components/Footer.jsx" -ItemType File -Force
