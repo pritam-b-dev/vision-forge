@@ -1,4 +1,5 @@
 
+
 mkdir src/app/photos
 mkdir src/app/photos/[id]
 mkdir src/app/signin
@@ -18,3 +19,19 @@ New-Item -Path "src/app/photos/page.jsx",
 "src/components/FeaturedImages.jsx", 
 "src/components/PhotoCard.jsx", 
 "src/components/Footer.jsx" -ItemType File -Force
+
+
+
+
+New-Item -Path "src/app/(main)/photos/page.jsx", 
+"src/app/(main)/photos/[id]/page.jsx", 
+"src/app/(main)/profile/page.jsx", 
+"src/app/(main)/layout.js", "src/app/(auth)/signin/page.jsx", 
+"src/app/(auth)/signup/page.jsx", 
+"src/app/(auth)/layout.js" -ItemType File -Force
+
+
+Remove-Item -Recurse -Force src/app/photos, src/app/signin, src/app/signup, src/app/profile
+
+
+
