@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const PhotoCard = ({ photo }) => {
@@ -15,18 +16,24 @@ const PhotoCard = ({ photo }) => {
           ></Image>
         </figure>
         <div className="card-body">
-          <h2 className="card-title">
-            Card Title
-            <div className="badge badge-secondary">NEW</div>
+          <h2 className="card-title flex justify-between">
+            {photo.title}
+
+            <div className="badge badge-secondary ">{photo.category}</div>
           </h2>
-          <p>
-            A card component has a figure, a body part, and inside body there
-            are title and actions parts
-          </p>
-          <div className="card-actions justify-end">
-            <div className="badge badge-outline">Fashion</div>
-            <div className="badge badge-outline">Products</div>
+
+          <div className="">
+            <span>Likes:</span>
+            <span className=" mr-2">{photo.likes}</span>
+            <span>Downloads:</span>
+            <span className="">{photo.downloads}</span>
           </div>
+          <Link
+            href={`/photos/${photo.id}`}
+            className="bg-amber-700 text-center text-white p-1 rounded-lg"
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>
