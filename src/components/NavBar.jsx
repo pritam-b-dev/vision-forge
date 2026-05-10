@@ -1,17 +1,18 @@
 import Link from "next/link";
 import React from "react";
+import NavLink from "./NavLink";
 
 const NavBar = () => {
   const nav = (
     <>
       <li>
-        <Link href={"/"}>Home</Link>
+        <NavLink href={"/"}>Home</NavLink>
       </li>
       <li>
-        <Link href={"/photos"}>AI Photos</Link>
+        <NavLink href={"/photos"}> AI Photos</NavLink>
       </li>
       <li>
-        <Link href={"/profile"}>Profile</Link>
+        <NavLink href={"/profile"}>Profile</NavLink>
       </li>
     </>
   );
@@ -37,7 +38,7 @@ const NavBar = () => {
             </svg>
           </div>
           <ul
-            tabIndex="-1"
+            tabIndex="0"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {nav}
